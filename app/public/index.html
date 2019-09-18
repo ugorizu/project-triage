@@ -32,13 +32,23 @@
       <div id="mainContent" class="col-md">Registration form</div>
       <div id="patientRecordApp">
         <form>
-          <!-- update code for MASTER PROJECT TRIAGE 9-16 {VIEW VIDOE:MEDIA GALLLERY} -->
 
         </form>
-        <table>
-          <thread>
-            <!-- update code for MASTER PROJECT TRIAGE 9-16 {VIEW VIDOE:MEDIA GALLLERY} -->
-          </thread>
+        <table class="table table-sm table-hover">
+          <thead>
+            <th>First</th>
+            <th>Last</th>
+            <th>DOB</th>
+            <th>SAB</th>
+          </thead>
+          <tbody>
+            <tr v-for="p in patients">
+              <td>{{ p.firstName }}</td>
+              <td>{{ p.lastName }}</td>
+              <td>{{ p.dob }}</td>
+              <td>{{ p.sexAtBirth }}</td>
+            </tr>
+          </tbody>
         </table>
       </div>
       <!-- <div id="patientTriageApp">
