@@ -1,5 +1,5 @@
-var recordApp = new Vue({
-  el: '#patientrecordApp',
+var patientRecordApp = new Vue({
+  el: '#patientRecordApp',
   data: {
     patients: []
   },
@@ -7,17 +7,10 @@ var recordApp = new Vue({
     fetchPatients() {
       fetch('dummy.php')
       .then(response => response.json())
-      .then(json => {recordApp.patients = json});
-
-      // Means the same at this
-      // fetch('https://randomuser.me/api/')
-      // .then(function(response) {return response.json()})
-      // .then(function(json) {waitingApp.people = json});
-
+      .then(json => { patientRecordApp.patients = json })
     }
   },
-  created: function() {
+  created() {
     this.fetchPatients();
   }
-
-})
+});
