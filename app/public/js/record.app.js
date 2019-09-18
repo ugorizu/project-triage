@@ -1,7 +1,8 @@
 var patientRecordApp = new Vue({
   el: '#patientRecordApp',
   data: {
-    patients: []
+    patients: [],
+    //ADD CODE FROM "TOM's UPDATES"
   },
   methods: {
     fetchPatients() {
