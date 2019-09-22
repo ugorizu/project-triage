@@ -1,21 +1,32 @@
-var patientRecordApp = new Vue({
-  el: '#patientRecordApp',
+var patientRecordsApp = new Vue({
+  el: '#patientRecordsApp',
   data: {
     patients: [],
-    //ADD CODE: list
-
+    formPatient: {
+      firstName: '',
+      lastName: '',
+      dob: '',
+      sexAtBirth: ''
+    }
   },
   methods: {
     fetchPatients() {
       fetch('dummy.php')
       .then(response => response.json())
-      .then(json => { patientRecordApp.patients = json })
+      .then(json => { patientRecordsApp.patients = json })
+    },
+    handleCreateRecord(event) {
+      // fetch(url, {method:'post', data:thisFormPatient})
+      // .then()
+      this.patients.push(this.formPatient);
+      this.formPatient = {
+        firstName: '',
+        lastName: '',
+        dob: '',
+        sexAtBirth: ''
+      }
     }
   },
-
-    //ADD CODE:A.Create "handleCreateRecord "(1)handle on create (2)this: patients.push ....
-    //         B. this.patinets +plus list
-
   created() {
     this.fetchPatients();
   }
