@@ -15,7 +15,8 @@ INSERT INTO Patient (patientGuid, firstName, lastName, dob, sexAtBirth) VALUES
 ("SOME-DUMMY-DATA", "Pepper", "Potts", "1990-01-31",  "F");
 
 
-
+-- !!!!!!!!!!!!!!!!!!!!!!! CREATE TABLE PATIENTVISIT (2)INSERT INTO PATIENTVISIT  (Green 09-25)
+-- !!!!!!!!!!!!!!!!!!!!!!! UPDATE MYSQLWORKBENCH ^ USE msis_triage; > CREATE TABLE PATIENTVISIT (2)INSERT INTO PATIENTVISIT
 
 -- CREATE TABLE Patient (
 --     patientGuid VARCHAR(64) PRIMARY KEY,
